@@ -345,6 +345,7 @@ section {
 
 #education {
   position: relative;
+  overflow: auto;
 }
 
 .education {
@@ -360,15 +361,21 @@ section {
   margin: auto;
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
   position: relative;
+  max-height: calc(100% - 100px);
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .timeline-items::before {
   content: "";
   position: absolute;
   width: 5px;
-  height: 100px;
+  height: 100%; /* La línea de tiempo se extiende hasta el final */
   left: calc(50% - 1px);
+  top: 0;
+  background-color: rgb(29, 78, 216);
 }
 
 .timeline-item {
@@ -383,22 +390,24 @@ section {
 
 .timeline-items:nth-child(odd) {
   padding-right: calc(50% + 30px);
+  padding-left: 0;
   text-align: right;
 }
 
 .timeline-items:nth-child(even) {
   padding-left: calc(50% + 30px);
+  padding-right: 0;
 }
 
-/* .timeline-dot {
+.timeline-dot {
   height: 21px;
   width: 21px;
   position: absolute;
-  left: calc(50% - 8px);
+  left: calc(50% - 8.5px);
   border-radius: 50%;
   top: 10px;
   background-color: rgb(29, 78, 216);
-} */
+}
 
 .timeline-date {
   font-size: 20px;
