@@ -452,3 +452,51 @@ section {
   width: 50px;
   display: none;
 }
+
+/* EXPERIENCE SECTION */
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Dos columnas iguales */
+  grid-template-rows: auto; /* Las filas se ajustan automáticamente según el contenido */
+  gap: 20px; /* Espacio entre los elementos */
+  padding: 20px; /* Espacio alrededor de la cuadrícula */
+}
+
+.box-container,
+.skills-container {
+  padding: 1rem;
+  flex: 1;
+  background: white;
+  border-radius: 2rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rgb(163, 163, 163);
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.skills-container .article-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skills-container .article-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Tres columnas iguales */
+  grid-template-rows: repeat(3, auto); /* Tres filas automáticas */
+  gap: 10px; /* Espacio entre los artículos */
+}
+
+.skills-container article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background: #f9f9f9;
+  border-radius: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* CONTACT SECTION */
